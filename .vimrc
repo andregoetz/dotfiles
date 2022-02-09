@@ -23,16 +23,6 @@ set ignorecase  " Ignore case in search patterns
 set smartcase  " Override the 'ignorecase' option if the search pattern contains upper case characters
 set incsearch  " Search while typing
 
-" -- Copy, paste, delete --
-set clipboard+=unnamed  " Enable system clipboard
-" copy, paste, delete with systemclipboard
-noremap y "+y
-noremap yy "+yy
-noremap p "+p
-noremap P "+P
-noremap d "+d
-noremap dd "+dd
-
 " -- Shortcuts --
 " In insert or command mode, move by using Ctrl
 inoremap <C-h> <Left>
@@ -43,4 +33,24 @@ cnoremap <C-h> <Left>
 cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
 cnoremap <C-l> <Right>
+
+" copy, paste, delete with system clipboard
+set clipboard+=unnamed  " Enable system clipboard
+noremap y "+y
+noremap yy "+yy
+noremap p "+p
+noremap P "+P
+noremap d "+d
+noremap dd "+dd
+
+" move lines
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" -- Plugins --
+call plug#begin()
 
