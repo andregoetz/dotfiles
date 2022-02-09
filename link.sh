@@ -1,4 +1,4 @@
 #!/bin/bash
 
-ln -s .vimrc ~
-ln -s .zshrc ~
+ln -s dotfiles/.vimrc ~
+ln -s dotfiles/.zshrc ~
