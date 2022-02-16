@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/home/andiru/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Theme
 ZSH_THEME="andiru"
 
 # Plugins
-plugins=(git sudo zsh-autosuggestions)
+plugins=(git sudo zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 

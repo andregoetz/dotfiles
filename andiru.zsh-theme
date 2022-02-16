@@ -7,13 +7,18 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-# primary prompt from amuse (without clock symbol but time in blue [])
+# primary prompt based on amuse
 PROMPT='%{$fg_bold[green]%}%~%{$reset_color%}$(git_prompt_info) $fg_bold[blue][ %{$fg_bold[red]%}%*%{$reset_color%} $fg_bold[blue]]%{$reset_color%}
-$ '
+'
+if [[ $(id -u) == 0 ]]; then
+    PROMPT+='# '
+else
+    PROMPT+='$ '
+fi
 
 # right prompt from af-magic
 RPROMPT="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
-if (( $+functions[virtualenv_prompt_info] )); then
-  RPROMPT+='$(virtualenv_prompt_info)'
+if [[ $+functions[virtualenv_prompt_info] ]]; then
+    RPROMPT+='$(virtualenv_prompt_info)'
 fi
 RPROMPT+=" ${FG[237]}%n@%m%{$reset_color%}"
