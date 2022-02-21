@@ -78,4 +78,26 @@ export PATH=$PATH:$HOME/.local/bin
 # Aliases
 alias so=switch-output
 alias si=switch-input
+search() {
+    search_str="https://lite.duckduckgo.com/lite?q="
+    for word in $*; do
+	search_str+="${word}+"
+    done
+    elinks $search_str
+}
+ddg() {
+    ddgr -r de-de --url-handler firefox-nightly $*
+}
+rn () {
+    if [[ $# != 2 ]]; then
+	echo "Usage: rn FILE NEW_NAME"
+    else
+	dir=$(dirname $1)
+	nf=${dir}/$2
+	mv $1 $nf
+    fi
+}
+rgg () {
+    git rev-list --all | xargs git grep "$*"
+}
 

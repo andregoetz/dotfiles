@@ -2,7 +2,9 @@
 
 if [[ $1 == "-i" ]]; then
     echo "Installing zsh, gvim and neovim"
-    sudo pacman -S zsh gvim neovim python-pynvim vim-spell-de vim-spell-en
+    sudo pacman -S zsh \
+	gvim neovim python-pynvim vim-spell-de vim-spell-en \
+	elinks
 fi
 echo "Installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
