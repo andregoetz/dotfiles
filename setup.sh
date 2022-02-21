@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ $1 == "-i" ]]; then
-    echo "Installing zsh, gvim and neovim"
+    echo "Installing packages"
     sudo pacman -S zsh \
 	gvim neovim python-pynvim vim-spell-de vim-spell-en \
 	elinks
