@@ -34,15 +34,6 @@ cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
 cnoremap <C-l> <Right>
 
-" copy, paste, delete with system clipboard
-set clipboard+=unnamed  " Enable system clipboard
-noremap y "+y
-noremap yy "+yy
-noremap p "+p
-noremap P "+P
-noremap d "+d
-noremap dd "+dd
-
 " move lines
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
