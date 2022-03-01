@@ -63,4 +63,10 @@ rn () {
 rgg () {
     git rev-list --all | xargs git grep "$*"
 }
+vv() {
+    virt-viewer --connect=qemu:///system --domain-name $1
+}
+findn() {
+    find . -name "*$**"
+}
 
