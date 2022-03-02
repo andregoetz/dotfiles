@@ -4,7 +4,7 @@ if [[ $1 == "-i" ]]; then
     echo "Installing packages"
     sudo pacman -S zsh \
 	gvim neovim python-pynvim vim-spell-de vim-spell-en \
-	elinks
+	elinks encfs
     yay -S ddgr
 fi
 echo "Installing Oh My Zsh"
