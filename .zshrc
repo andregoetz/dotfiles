@@ -50,13 +50,9 @@ ddg() {
     ddgr -r de-de --url-handler firefox-developer-edition $*
 }
 rn () {
-    if [[ $# != 2 ]]; then
-	echo "Usage: rn FILE NEW_NAME"
-    else
-	dir=$(dirname $1)
-	nf=${dir}/$2
-	mv $1 $nf
-    fi
+    dir=$(dirname $1)
+    nf=${dir}/$2
+    mv $1 $nf
 }
 rgg () {
     git rev-list --all | xargs git grep "$*"
@@ -66,5 +62,15 @@ vv() {
 }
 findn() {
     find . -name "*$**"
+}
+encrypt() {
+    en=$(readlink -f $1)
+    ori=$(readlink -f $2)
+    mkdir $ori
+    encfs $en $ori
+}
+decrypt() {
+    dir=$(readlink -f $1)
+    fusermount -u $dir && rm -r $dir
 }
 
