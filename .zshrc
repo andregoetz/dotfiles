@@ -39,8 +39,6 @@ export PATH=$PATH:$HOME/.local/bin
 export EDITOR='nvim'
 
 # Aliases
-alias so=switch-output
-alias si=switch-input
 search() {
     search_str="https://lite.duckduckgo.com/lite?q="
     for word in $*; do
@@ -49,7 +47,7 @@ search() {
     elinks $search_str
 }
 ddg() {
-    ddgr -r de-de --url-handler firefox-nightly $*
+    ddgr -r de-de --url-handler firefox-developer-edition $*
 }
 rn () {
     if [[ $# != 2 ]]; then
