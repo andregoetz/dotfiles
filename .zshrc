@@ -39,6 +39,8 @@ export PATH=$PATH:$HOME/.local/bin
 export EDITOR='nvim'
 
 # Aliases
+alias pacshut='sudo pacman -Syu --noconfirm;sudo shutdown now'
+alias pacreboot='sudo pacman -Syu --noconfirm;sudo reboot'
 search() {
     search_str="https://lite.duckduckgo.com/lite?q="
     for word in $*; do
