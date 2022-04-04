@@ -41,6 +41,7 @@ export EDITOR='nvim'
 # Aliases
 alias pacshut='yay -Syu --noconfirm && sudo shutdown now'
 alias pacreboot='yay -Syu --noconfirm && sudo reboot'
+alias disex='disown && exit'
 search() {
     search_str="https://lite.duckduckgo.com/lite?q="
     for word in $*; do
