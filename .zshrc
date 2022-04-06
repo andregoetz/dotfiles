@@ -5,7 +5,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="andiru"
 
 # Plugins
-plugins=(git sudo zoxide zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git sudo zoxide python zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -75,5 +75,11 @@ encrypt() {
 decrypt() {
     dir=$(readlink -f $1)
     fusermount -u $dir && rm -r $dir
+}
+dec_pdf() {
+    file=$1
+    mv $file enc_$file
+    qpdf --password=$2 --decrypt enc_$file $file
+    rm enc_$file
 }
 
