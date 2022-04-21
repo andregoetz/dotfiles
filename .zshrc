@@ -5,7 +5,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="andiru"
 
 # Plugins
-plugins=(git sudo zoxide python zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git sudo colorize zoxide python zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,6 +42,8 @@ export EDITOR='nvim'
 alias pacshut='yay -Syu --noconfirm && sudo shutdown now'
 alias pacreboot='yay -Syu --noconfirm && sudo reboot'
 alias disex='disown && exit'
+alias fhvpn='sudo openconnect -u ag3433s https://anyconnect.fh-aachen.de'
+
 search() {
     search_str="https://lite.duckduckgo.com/lite?q="
     for word in $*; do
@@ -77,9 +79,13 @@ decrypt() {
     fusermount -u $dir && rm -r $dir
 }
 dec_pdf() {
-    file=$1
-    mv $file enc_$file
-    qpdf --password=$2 --decrypt enc_$file $file
-    rm enc_$file
+    if [[ $1 == *.pdf ]]; then
+	echo -n "Enter password: "
+	read -s pw; echo
+	file=$1
+	mv $file enc_$file
+	qpdf --password=$pw --decrypt enc_$file $file
+	rm enc_$file
+    fi
 }
 
