@@ -43,6 +43,7 @@ alias pacshut='yay -Syu --noconfirm && sudo shutdown now'
 alias pacreboot='yay -Syu --noconfirm && sudo reboot'
 alias disex='disown && exit'
 alias fhvpn='sudo openconnect -u ag3433s https://anyconnect.fh-aachen.de'
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 search() {
     search_str="https://lite.duckduckgo.com/lite?q="
