@@ -55,10 +55,14 @@ search() {
 ddg() {
     ddgr -r de-de --url-handler firefox-developer-edition $*
 }
-rn () {
+rn() {
     dir=$(dirname $1)
     nf=${dir}/$2
     mv $1 $nf
+}
+lns() {
+    dir=$(pwd)
+    ln -s ${dir}/$1 $2
 }
 rgg () {
     git rev-list --all | xargs git grep "$*"
