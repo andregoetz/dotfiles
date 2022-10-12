@@ -5,9 +5,11 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="andiru"
 
 # Plugins
-plugins=(git sudo colorize zoxide python zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git sudo colorize zoxide python zsh-autosuggestions zsh-syntax-highlighting archlinux alias-finder common-aliases mvn copyfile copypath cp)
 
 source $ZSH/oh-my-zsh.sh
+
+ZSH_ALIAS_FINDER_AUTOMATIC=true
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -69,9 +71,6 @@ rgg () {
 }
 vv() {
     virt-viewer --connect=qemu:///system --domain-name $1
-}
-findn() {
-    find . -name "*$**"
 }
 encrypt() {
     en=$(readlink -f $1)
