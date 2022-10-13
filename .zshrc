@@ -72,16 +72,18 @@ rgg () {
 vv() {
     virt-viewer --connect=qemu:///system --domain-name $1
 }
-encrypt() {
+decrypt() {
     en=$(readlink -f $1)
     ori=$(readlink -f $2)
     mkdir $ori
     encfs $en $ori
 }
-decrypt() {
+alias init_encrypt='decrypt'
+encrypt() {
     dir=$(readlink -f $1)
     fusermount -u $dir && rm -r $dir
 }
+alias reencrypt='encrypt'
 dec_pdf() {
     if [[ $1 == *.pdf ]]; then
 	echo -n "Enter password: "
