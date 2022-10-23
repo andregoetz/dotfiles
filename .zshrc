@@ -56,9 +56,21 @@ search() {
 }
 duration() {
     for i in $*; do
-	echo -n "$i: "
+	echo -n "$(basename $i): "
 	ffmpeg -i "$i" 2>&1 | grep Duration | cut -d ' ' -f 4 | sed s/,//
     done
+}
+alias dur='duration'
+dursum() {
+    sum=0
+    for i in $*; do
+	sum=$(($sum + $(ffmpeg -i "$i" 2>&1 | grep Duration | cut -d ' ' -f 4 | sed s/,// | sed 's@\..*@@g' | awk '{ split($1, A, ":"); split(A[3], B, "."); print 3600*A[1] + 60*A[2] + B[1] }')))
+    done
+    tmp=$(($sum / 60))
+    s=$(($sum % 60))
+    min=$(($tmp % 60))
+    h=$(($tmp / 60))
+    echo "total duration: $h:$min:$s"
 }
 ddg() {
     ddgr -r de-de --url-handler firefox-developer-edition $*
