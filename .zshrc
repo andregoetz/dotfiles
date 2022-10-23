@@ -54,6 +54,12 @@ search() {
     done
     elinks $search_str
 }
+duration() {
+    for i in $*; do
+	echo -n "$i: "
+	ffmpeg -i "$i" 2>&1 | grep Duration | cut -d ' ' -f 4 | sed s/,//
+    done
+}
 ddg() {
     ddgr -r de-de --url-handler firefox-developer-edition $*
 }
