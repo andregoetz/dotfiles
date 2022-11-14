@@ -39,6 +39,7 @@ export PATH=$PATH:$HOME/.local/bin
 
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
+export PAGER='most'
 
 # Aliases
 alias pacshut='yay -Syu --noconfirm && sudo shutdown now'

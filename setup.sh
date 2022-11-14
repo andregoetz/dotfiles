@@ -2,7 +2,7 @@
 
 if [[ $1 == "-p" ]]; then
     echo "Installing packages"
-    sudo pacman -S zsh zoxide \
+    sudo pacman -S zsh zoxide most \
     gvim neovim python-pynvim vim-spell-de vim-spell-en \
     elinks encfs qpdf xclip
     yay -S ddgr ttf-meslo-nerd-font-powerlevel10k
