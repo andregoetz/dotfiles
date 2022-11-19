@@ -17,6 +17,7 @@ set fileformat=unix  " \n at for EOL
 set omnifunc=syntaxcomplete#Complete  " Enable omni completion (IntelliSense like)
 set splitbelow  " Horizontal splitting a window will put the new window below the current one
 set splitright  " Vertical splitting a window will put the new window right of the current one
+set clipboard+=unnamedplus
 
 " -- Searching --
 set ignorecase  " Ignore case in search patterns
