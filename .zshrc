@@ -47,6 +47,7 @@ alias pacreboot='yay -Syu --noconfirm && sudo reboot'
 alias disex='disown && exit'
 alias fhvpn='sudo openconnect -u ag3433s https://anyconnect.fh-aachen.de'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias gcssm='git commit -s -S -m'
 
 search() {
     search_str="https://lite.duckduckgo.com/lite?q="
