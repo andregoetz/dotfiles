@@ -45,9 +45,10 @@ export PAGER='most'
 alias pacshut='yay -Syu --noconfirm && sudo shutdown now'
 alias pacreboot='yay -Syu --noconfirm && sudo reboot'
 alias disex='disown && exit'
-alias fhvpn='sudo openconnect -u ag3433s https://anyconnect.fh-aachen.de'
+alias fhvpn='sudo openconnect -u ag3433s https://vpn.fh-aachen.de/gast'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias gcssm='git commit -s -S -m'
+alias session_type='loginctl show-session $(loginctl | grep -o "[0-9]\+" | sed -n 1p) -p Type'
 
 search() {
     search_str="https://lite.duckduckgo.com/lite?q="
