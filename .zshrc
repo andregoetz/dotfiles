@@ -35,7 +35,7 @@ ZSH_ALIAS_FINDER_AUTOMATIC=true
 # HIST_STAMPS="dd.mm.yyyy"
 
 # User configuration
-export PATH=$PATH:$HOME/.local/bin:$HOME/.local/arm-gcc/bin:$HOME/.local/openocd/bin:$HOME/.local/share/JetBrains/Toolbox/scripts
+export PATH=$PATH:$HOME/.local/bin
 
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
@@ -47,9 +47,11 @@ alias pacreboot='yay -Syu --noconfirm && sudo reboot'
 alias disex='disown && exit'
 alias fhvpn='sudo openconnect -u ag3433s https://vpn.fh-aachen.de/gast'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias gcssm='git commit -s -S -m'
-alias session_type='loginctl show-session $(loginctl | grep -o "[0-9]\+" | sed -n 1p) -p Type'
 
+session_type() {
+    s=($(loginctl | grep seat0))
+    loginctl show-session ${s[1]} -p Type
+}
 search() {
     search_str="https://lite.duckduckgo.com/lite?q="
     for word in $*; do
