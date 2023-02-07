@@ -35,8 +35,6 @@ ZSH_ALIAS_FINDER_AUTOMATIC=true
 # HIST_STAMPS="dd.mm.yyyy"
 
 # User configuration
-export PATH=$PATH:$HOME/.local/bin
-export GPG_TTY=$(tty)
 
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'

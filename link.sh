@@ -2,6 +2,7 @@
 
 p=$(pwd)/$(dirname $0)
 
+ln -sf $p/.xprofile $HOME
 ln -sf $p/.vimrc $HOME
 ln -sf $p/.vimrc $HOME/.config/nvim/init.vim
 ln -sf $p/.tmux.conf $HOME/.tmux.conf
