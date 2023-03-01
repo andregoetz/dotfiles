@@ -39,7 +39,7 @@ export GPG_TTY=$(tty)
 
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
-export PAGER='most'
+export PAGER='nvimpager'
 
 # Aliases
 alias pacshut='yay -Syu --noconfirm && sudo shutdown now'
@@ -55,21 +55,21 @@ session_type() {
 search() {
     search_str="https://lite.duckduckgo.com/lite?q="
     for word in $*; do
-	search_str+="${word}+"
+    search_str+="${word}+"
     done
     elinks $search_str
 }
 duration() {
     for i in $*; do
-	echo -n "$(basename $i): "
-	ffmpeg -i "$i" 2>&1 | grep Duration | cut -d ' ' -f 4 | sed s/,//
+    echo -n "$(basename $i): "
+    ffmpeg -i "$i" 2>&1 | grep Duration | cut -d ' ' -f 4 | sed s/,//
     done
 }
 alias dur='duration'
 dursum() {
     sum=0
     for i in $*; do
-	sum=$(($sum + $(ffmpeg -i "$i" 2>&1 | grep Duration | cut -d ' ' -f 4 | sed s/,// | sed 's@\..*@@g' | awk '{ split($1, A, ":"); split(A[3], B, "."); print 3600*A[1] + 60*A[2] + B[1] }')))
+    sum=$(($sum + $(ffmpeg -i "$i" 2>&1 | grep Duration | cut -d ' ' -f 4 | sed s/,// | sed 's@\..*@@g' | awk '{ split($1, A, ":"); split(A[3], B, "."); print 3600*A[1] + 60*A[2] + B[1] }')))
     done
     tmp=$(($sum / 60))
     s=$(($sum % 60))
@@ -109,12 +109,41 @@ encrypt() {
 alias reencrypt='encrypt'
 dec_pdf() {
     if [[ $1 == *.pdf ]]; then
-	echo -n "Enter password: "
-	read -s pw; echo
-	file=$1
-	mv $file enc_$file
-	qpdf --password=$pw --decrypt enc_$file $file
-	rm enc_$file
+    echo -n "Enter password: "
+    read -s pw; echo
+    file=$1
+    mv $file enc_$file
+    qpdf --password=$pw --decrypt enc_$file $file
+    rm enc_$file
     fi
 }
-
+iommu_groups() {
+    shopt -s nullglob
+    for g in $(find /sys/kernel/iommu_groups/* -maxdepth 0 -type d | sort -V); do
+    echo "IOMMU Group ${g##*/}:"
+    for d in $g/devices/*; do
+        echo -e "\t$(lspci -nns ${d##*/})"
+    done;
+    done;
+}
+gen_crt() {
+    openssl genrsa -out "$1.key"
+    chmod 400 "$1.key"
+    openssl req -key "$1.key" -new -out "$1.csr"
+    chmod 444 "$1.csr"
+    if [[ -z "$2" ]]; then
+    openssl x509 -signkey "$1.key" -in "$1.csr" -req -days 365 -out "$1.crt"
+    #elif [[ -e "$2.crt" && -z "$2.key" ]]; then
+    else
+    cat > "$1.ext"<< EOF
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = $1
+EOF
+    openssl x509 -req -CA "$2.crt" -CAkey "$2.key" -in "$1.csr" -out "$1.crt" -days 365 -CAcreateserial -extfile "$1.ext"
+    chmod 444 "$1.ext"
+    fi
+    chmod 444 "$1.crt"
+}

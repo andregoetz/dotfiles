@@ -5,7 +5,7 @@ if [[ $1 == "-p" ]]; then
     sudo pacman -S zsh zoxide most tmux \
     gvim neovim python-pynvim vim-spell-de vim-spell-en \
     elinks encfs qpdf xclip
-    yay -S ddgr ttf-meslo-nerd-font-powerlevel10k
+    yay -S ddgr ttf-meslo-nerd-font-powerlevel10k nvimpager
 else
     echo "Installing Oh My Zsh"
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
