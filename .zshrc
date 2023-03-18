@@ -147,3 +147,4 @@ EOF
     fi
     chmod 444 "$1.crt"
 }
+
