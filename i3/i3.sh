@@ -2,7 +2,7 @@
 
 if [[ $1 == "-p" ]]; then
     echo "Installing packages"
-    yay -S rofi-greenclip redshift flameshot
+    yay -S copyq gnome-calculator firefox-developer-edition redshift flameshot
 else
     p=$(pwd)/$(dirname $0)
 
