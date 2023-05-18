@@ -12,8 +12,6 @@ else
     echo "Installing zsh plugins"
     git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-    echo "Creating nvim config folder"
-    mkdir -p $HOME/.config/nvim
-    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    echo "Setting up nvchad"
+    git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
 fi

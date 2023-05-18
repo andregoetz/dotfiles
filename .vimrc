@@ -42,23 +42,3 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
-" plugins
-setlocal omnifunc=syntaxcomplete#Complete
-call plug#begin()
-" nvim-cmp
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/vim-vsnip'
-" nvim-tree
-Plug 'nvim-tree/nvim-web-devicons' " optional
-Plug 'nvim-tree/nvim-tree.lua'
-call plug#end()
-
-lua require('completion')
-lua require('lang-server')
-lua require('tree')
