@@ -7,3 +7,4 @@ rm -rf ~/Music && ln -sf ~/data/Music ~
 rm -rf ~/Pictures && ln -sf ~/data/Pictures ~
 rm -rf ~/Videos && ln -sf ~/data/Videos ~
 ln -sf ~/data/DEV ~
+ln -sf ~/data/Sync ~
