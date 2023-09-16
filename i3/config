@@ -316,11 +316,11 @@ set $ws10 "10"
 #workspace $ws5 output HDMI-0
 
 # bind program to workspace and focus to them on startup:
-assign [class="Xfce4-terminal"] $ws1
+#assign [class="Xfce4-terminal"] $ws1
 assign [class="(?i)firefox"] $ws2
 assign [class="LibreWolf"] $ws2
 assign [class="Chromium-browser"] $ws2
-assign [class="Thunar"] $ws3
+#assign [class="Thunar"] $ws3
 assign [class="thunderbird"] $ws4
 assign [class="Element"] $ws5
 assign [class="WebCord"] $ws5
@@ -397,10 +397,12 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
+#exec --no-startup-id sleep 1 && feh --bg-fill /home/andiru/Pictures/profiles\ etc/thumb-1920-725002.png
 exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
 
 # set powersavings for display:
-exec --no-startup-id xset s 480 dpms 600 600 600
+exec --no-startup-id xset dpms 0 0 600
+exec --no-startup-id xss-lock -- betterlockscreen -l
 
 # disable power saving (for example if using xscreensaver)
 #exec --no-startup-id xset -dpms
@@ -430,7 +432,7 @@ exec --no-startup-id dunst
 #exec_always --no-startup-id autotiling
 
 # Autostart apps as you like
-exec --no-startup-id sleep 5 && xfce4-terminal
+exec --no-startup-id xfce4-terminal
 #exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && thunar
 exec --no-startup-id firefox-developer-edition

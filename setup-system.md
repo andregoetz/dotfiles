@@ -1,0 +1,7 @@
+- install iso with i3
+- clone dotfiles and install i3 and setup stuff
+- setup partitions with gnome-disk-utility (auto enc/mount and noatime for all --> data gets no nofail)
+- setup data with script
+- copy themes and icons and set it in look-and-feel
+- setup lightdm (copy image to /usr/share/lightdm/main.png and other config files)
+- neoqwertz wie auf der website einrichten (und /etc/default/keyboard auch) --> reinstall linux to have it in the image-thingy
