@@ -119,7 +119,7 @@ menu=(
   [ Suspend]="betterlockscreen -l && sleep 1 && systemctl suspend"
   [ Hibernate]="betterlockscreen -l && sleep 1 && systemctl hibernate"
   [ Lock]="betterlockscreen -l && sleep 1"
-  [ Logout]="i3-msg exit"
+  [ Logout]="loginctl kill-user andiru"
   [ Cancel]=""
 )
 
