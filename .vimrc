@@ -17,6 +17,7 @@ set fileformat=unix  " \n at for EOL
 set splitbelow  " Horizontal splitting a window will put the new window below the current one
 set splitright  " Vertical splitting a window will put the new window right of the current one
 set clipboard+=unnamedplus
+let mapleader = ","
 
 " -- Searching --
 set ignorecase  " Ignore case in search patterns
@@ -41,4 +42,17 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" deleting without yanking
+nnoremap <leader>x "_x
+xnoremap <leader>x "_x
+nnoremap <leader>c "_c
+xnoremap <leader>c "_c
+nnoremap <leader>C "_C
+xnoremap <leader>C "_C
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+nnoremap <leader>D "_D
+xnoremap <leader>D "_D
+xnoremap <leader>p "_dP
 

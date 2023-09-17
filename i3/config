@@ -501,9 +501,9 @@ exec --no-startup-id sleep 3 && i3-msg "workspace $ws1"
 for_window [class="Yad" instance="yad"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="gnome-calculator" instance="gnome-calculator"] floating enable
+for_window [class="gnome-calendar" instance="gnome-calendar"] floating enable
 for_window [class="copyq" instance="copyq"] floating enable
 for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
-
 
 # set floating (nontiling) for special apps
 for_window [class="Xsane" instance="xsane"] floating enable
@@ -517,6 +517,7 @@ for_window [window_role="About"] floating enable
 # set border of floating window
 for_window [class="urxvt"] border pixel 3
 for_window [class="gnome-calculator"] border pixel 3
+for_window [class="gnome-calendar"] border pixel 3
 
 # set border for windows that dont wanna
 for_window [class="Gnome-disks"] border pixel 3
@@ -530,9 +531,11 @@ for_window [class="Code"] border pixel 3
 # set size of floating window
 #for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog
 #for_window [class=".*"] resize set 640 480 #to change size of all floating windows 
+for_window [class="gnome-calendar"] resize set 1050 600
 
 # set position of floating window
 #for_window [class=".*"] move position center
+for_window [class="gnome-calendar"] move position 4050 795
 
 ######################################
 # color settings for bar and windows #
