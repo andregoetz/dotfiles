@@ -357,11 +357,11 @@ assign [class="Code"] $ws6
 #for_window [class="(?i)firefox"] focus
 #for_window [class="LibreWolf"] focus
 #for_window [class="Chromium-browser"] focus
-for_window [class="Thunar"] focus
+#for_window [class="Thunar"] focus
 for_window [class="thunderbird"] focus
 for_window [class="electron-mail"] focus
-for_window [class="Element"] focus
-for_window [class="WebCord"] focus
+#for_window [class="Element"] focus
+#for_window [class="WebCord"] focus
 for_window [class="Code"] focus
 
 ##############
