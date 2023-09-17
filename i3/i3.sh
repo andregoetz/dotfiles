@@ -13,6 +13,7 @@ ln -sf "$p"/.Xresources ~/.Xresources
 ln -sf "$p"/mimeapps.list ~/.config/mimeapps.list
 
 mkdir -p ~/.i3
+ln -sf "$p"/bg.png ~/.i3/bg.png
 ln -sf "$p"/layouts/workspace-1.json ~/.i3/workspace-1.json
 ln -sf "$p"/layouts/workspace-2.json ~/.i3/workspace-2.json
 ln -sf "$p"/layouts/workspace-5.json ~/.i3/workspace-5.json

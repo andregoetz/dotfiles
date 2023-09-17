@@ -208,7 +208,7 @@ bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
 #bindsym $mod+l exec i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
 # lock by blurring the screen:
 #bindsym $mod+l exec ~/.config/i3/scripts/blur-lock
-set $Locker betterlockscreen -l && sleep 1
+set $Locker betterlockscreen -l blur && sleep 1
 bindsym Control+Mod1+l exec $Locker
 
 # reload the configuration file
@@ -426,12 +426,12 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-#exec --no-startup-id sleep 1 && feh --bg-fill /home/andiru/Pictures/profiles\ etc/thumb-1920-725002.png
-exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
+exec --no-startup-id sleep 1 && feh --bg-fill ~/.i3/bg.png
+#exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
 
 # set powersavings for display:
 exec --no-startup-id xset dpms 0 900 600
-exec --no-startup-id xss-lock -- betterlockscreen -l
+exec --no-startup-id xss-lock -- betterlockscreen -l blur
 
 # disable power saving (for example if using xscreensaver)
 #exec --no-startup-id xset -dpms
