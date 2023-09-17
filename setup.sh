@@ -10,7 +10,8 @@ if [[ $1 == "-p" ]]; then
     github-cli nodejs npm
     flatpak install flathub io.github.spacingbat3.webcord com.github.tchx84.Flatseal io.gitlab.librewolf-community com.github.Eloston.UngoogledChromium \
     org.libreoffice.LibreOffice org.flameshot.Flameshot org.gimp.GIMP com.github.vladimiry.ElectronMail org.mozilla.Thunderbird com.github.jeromerobert.pdfarranger \
-    org.qbittorrent.qBittorrent org.gnome.SimpleScan com.belmoussaoui.Authenticator org.videolan.VLC com.nextcloud.desktopclient.nextcloud org.gnome.Evince
+    org.qbittorrent.qBittorrent org.gnome.SimpleScan com.belmoussaoui.Authenticator org.videolan.VLC com.nextcloud.desktopclient.nextcloud org.gnome.Evince \
+    com.github.xournalpp.xournalpp
 else
     echo "Installing Oh My Zsh"
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
