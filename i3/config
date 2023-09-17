@@ -353,9 +353,9 @@ assign [class="WebCord"] $ws5
 assign [class="Code"] $ws6
 
 # automatic set focus new window if it opens on another workspace than the current:
-for_window [class="Xfce4-terminal"] focus
-for_window [class="(?i)firefox"] focus
-for_window [class="LibreWolf"] focus
+#for_window [class="Xfce4-terminal"] focus
+#for_window [class="(?i)firefox"] focus
+#for_window [class="LibreWolf"] focus
 #for_window [class="Chromium-browser"] focus
 for_window [class="Thunar"] focus
 for_window [class="thunderbird"] focus
