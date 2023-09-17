@@ -1,0 +1,22 @@
+#!/bin/bash
+
+case $BLOCK_BUTTON in
+  1) pavucontrol ;;			 # left click, pavucontrol
+  2) amixer -q sset Master toggle ;;	 # middle click, mute/unmute
+  4) amixer -q sset Master 5%+ unmute ;; # scroll up, increase
+  5) amixer -q sset Master 5%- unmute ;; # scroll down, decrease
+esac
+
+statusLine=$(amixer get Master | tail -n 1)
+status=$(echo "${statusLine}" | grep -wo "on")
+volume=$(echo "${statusLine}" | awk -F ' ' '{print $5}' | tr -d '[]%')
+
+if [[ "${status}" == "on" ]]; then
+  echo "  ${volume}%"
+  echo "  ${volume}%"
+  echo "#FFFFFF"
+else
+  echo "  Mute"
+  echo "  Mute"
+  echo "#FF0000"
+fi

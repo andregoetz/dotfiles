@@ -168,6 +168,28 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# move floating window
+mode "move" {
+    bindsym $mod+Tab focus right
+
+    bindsym Left  move left
+    bindsym Down  move down
+    bindsym Up    move up
+    bindsym Right move right
+
+    bindsym h     move left
+    bindsym j     move down
+    bindsym k     move up
+    bindsym l     move right
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+m mode "default"
+}
+
+bindsym $mod+m mode "move" focus floating
+
 ######################################
 # keybindings for different actions: #
 ######################################
@@ -267,6 +289,8 @@ bindsym $mod+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%- && pkill 
 
 # mute
 bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
+bindsym XF86AudioMicMute exec amixer sset Capture toggle && killall -USR1 i3blocks
+bindsym Control+XF86AudioMute exec amixer sset Capture toggle && killall -USR1 i3blocks
 
 # Calculator
 bindsym XF86Calculator exec --no-startup-id gnome-calculator
@@ -332,7 +356,7 @@ assign [class="Code"] $ws6
 for_window [class="Xfce4-terminal"] focus
 for_window [class="(?i)firefox"] focus
 for_window [class="LibreWolf"] focus
-for_window [class="Chromium-browser"] focus
+#for_window [class="Chromium-browser"] focus
 for_window [class="Thunar"] focus
 for_window [class="thunderbird"] focus
 for_window [class="electron-mail"] focus
