@@ -406,7 +406,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
 
 # set powersavings for display:
-exec --no-startup-id xset dpms 0 0 600
+exec --no-startup-id xset dpms 0 900 600
 exec --no-startup-id xss-lock -- betterlockscreen -l
 
 # disable power saving (for example if using xscreensaver)
