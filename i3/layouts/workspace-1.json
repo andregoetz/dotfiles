@@ -9,14 +9,13 @@
        "y": 0
     },
     "marks": [],
-    "name": "Terminal - i3-save-tree --workspace 1: > workspace-1.json",
+    "name": "Terminal",
     "percent": 1,
     "swallows": [
        {
            "class": "^Xfce4\\-terminal$",
            "instance": "^xfce4\\-terminal$",
-           "machine": "^andiru\\-endeavour$",
-           "window_role": "^xfce4\\-terminal\\-1694974472\\-195530008$"
+           "machine": "^andiru\\-endeavour$"
        }
     ],
     "type": "con"
