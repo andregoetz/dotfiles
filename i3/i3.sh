@@ -10,3 +10,8 @@ ln -sf "$p"/volume ~/.config/i3/scripts/volume
 ln -sf "$p"/microphone ~/.config/i3/scripts/microphone
 ln -sf "$p"/.Xresources ~/.Xresources
 ln -sf "$p"/mimeapps.list ~/.config/mimeapps.list
+
+mkdir -p ~/.i3
+ln -sf "$p"/layouts/workspace-1.json ~/.i3/workspace-1.json
+ln -sf "$p"/layouts/workspace-2.json ~/.i3/workspace-2.json
+ln -sf "$p"/layouts/workspace-5.json ~/.i3/workspace-5.json

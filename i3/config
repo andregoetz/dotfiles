@@ -461,15 +461,17 @@ exec --no-startup-id dunst
 #exec_always --no-startup-id autotiling
 
 # Autostart apps as you like
-#exec --no-startup-id sleep 5 && xfce4-terminal
-#exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
-#exec --no-startup-id sleep 3 && thunar
+exec --no-startup-id i3-msg "workspace $ws1; append_layout ~/.i3/workspace-1.json"
+exec --no-startup-id sleep 5 && xfce4-terminal
+exec --no-startup-id i3-msg "workspace $ws2; append_layout ~/.i3/workspace-2.json"
 exec --no-startup-id firefox-developer-edition
-exec --no-startup-id element-desktop
 exec --no-startup-id flatpak run com.github.Eloston.UngoogledChromium
+exec --no-startup-id i3-msg "workspace $ws5; append_layout ~/.i3/workspace-5.json"
+exec --no-startup-id element-desktop
+exec --no-startup-id flatpak run io.github.spacingbat3.webcord
+# background apps
 exec --no-startup-id flatpak run com.github.vladimiry.ElectronMail
 exec --no-startup-id flatpak run com.nextcloud.desktopclient.nextcloud
-exec --no-startup-id flatpak run io.github.spacingbat3.webcord
 exec --no-startup-id flatpak run org.flameshot.Flameshot
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift -t 6500:2500

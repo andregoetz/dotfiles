@@ -1,0 +1,48 @@
+{
+    "border": "pixel",
+    "current_border_width": 3,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1391,
+       "width": 2542,
+       "x": 1289,
+       "y": 24
+    },
+    "marks": [],
+    "name": "WebCord - Friends",
+    "percent": 0.5,
+    "swallows": [
+       {
+           "class": "^WebCord$",
+           "instance": "^webcord$",
+           "machine": "^andiru\\-endeavour$",
+           "window_role": "^browser\\-window$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 3,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1391,
+       "width": 5096,
+       "x": 12,
+       "y": 12
+    },
+    "marks": [],
+    "name": "Element * | bot.matrix-reminder-bot",
+    "percent": 0.5,
+    "swallows": [
+       {
+           "class": "^Element$",
+           "instance": "^element$",
+           "machine": "^andiru\\-endeavour$",
+           "window_role": "^browser\\-window$"
+       }
+    ],
+    "type": "con"
+}
+
