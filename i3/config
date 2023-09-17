@@ -415,7 +415,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id numlockx off
 
 # configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)
-#exec --no-startup-id setxkbmap -layout 'us,sk' -variant altgr-intl,qwerty -option 'grp:alt_caps_toggle'
+exec --no-startup-id setxkbmap -layout 'de,ru' -variant neo_qwertz,phonetic -option 'grp:rctrl_rshift_toggle' -model pc105
 
 # start conky:
 #exec_always --no-startup-id conky
@@ -473,7 +473,6 @@ exec --no-startup-id flatpak run io.github.spacingbat3.webcord
 exec --no-startup-id flatpak run org.flameshot.Flameshot
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift -t 6500:2500
-exec --no-startup-id setxkbmap -layout de -model pc105 -variant neo_qwertz
 exec --no-startup-id firewall-applet
 
 ###############
