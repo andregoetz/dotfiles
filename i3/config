@@ -283,6 +283,7 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 ## App shortcuts
 #bindsym $mod+g exec /usr/bin/firefox-developer-edition
 bindsym $mod+n exec /usr/bin/thunar
+bindsym Control+Mod1+c exec /usr/bin/code
 #bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 bindsym Print exec --no-startup-id flatpak run org.flameshot.Flameshot gui
 
@@ -300,7 +301,7 @@ set $ws2 "2:"
 set $ws3 "3:"
 set $ws4 "4:"
 set $ws5 "5:"
-set $ws6 "6"
+set $ws6 "6:"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -325,17 +326,19 @@ assign [class="thunderbird"] $ws4
 assign [class="electron-mail"] $ws4
 assign [class="Element"] $ws5
 assign [class="WebCord"] $ws5
+assign [class="Code"] $ws6
 
 # automatic set focus new window if it opens on another workspace than the current:
-for_window [class=Xfce4-terminal] focus
-for_window [class=(?i)firefox] focus
-for_window [class=LibreWolf] focus
-for_window [class=Chromium-browser] focus
-for_window [class=Thunar] focus
-for_window [class=Thunderbird] focus
-for_window [class=electron-mail] focus
-for_window [class=Element] focus
-for_window [class=WebCord] focus
+for_window [class="Xfce4-terminal"] focus
+for_window [class="(?i)firefox"] focus
+for_window [class="LibreWolf"] focus
+for_window [class="Chromium-browser"] focus
+for_window [class="Thunar"] focus
+for_window [class="thunderbird"] focus
+for_window [class="electron-mail"] focus
+for_window [class="Element"] focus
+for_window [class="WebCord"] focus
+for_window [class="Code"] focus
 
 ##############
 # compositor #
@@ -496,6 +499,7 @@ for_window [class="authenticator"] border pixel 3
 for_window [class="com.github.tchx84.Flatseal"] border pixel 3
 for_window [class="Simple-scan"] border pixel 3
 for_window [class="Evince"] border pixel 3
+for_window [class="Code"] border pixel 3
 
 # set size of floating window
 #for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog

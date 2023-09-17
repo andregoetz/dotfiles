@@ -5,3 +5,5 @@
 - copy themes and icons and set it in look-and-feel
 - setup lightdm (copy image to /usr/share/lightdm/main.png and other config files)
 - neoqwertz wie auf der website einrichten (und /etc/default/keyboard auch) --> reinstall linux to have it in the image-thingy
+- setup printer like in howto
+- gh cli stuff `gh auth login` and `gh config set browser firefox-developer-edition`
