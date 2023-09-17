@@ -1,10 +1,10 @@
 #!/bin/bash
 
 case $BLOCK_BUTTON in
-  1) pavucontrol ;;			  # left click, pavucontrol
-  2) amixer -q sset Capture toggle ;;	  # middle click, mute/unmute
-  4) amixer -q sset Capture 5%+ unmute ;; # scroll up, increase
-  5) amixer -q sset Capture 5%- unmute ;; # scroll down, decrease
+  1) pavucontrol ;;											     # left click, pavucontrol
+  2) amixer -q sset Capture toggle ;;									     # middle click, mute/unmute
+  4) amixer sget Capture | grep -q "\[off\]" && amixer -q sset Capture toggle; amixer -q sset Capture 5%+ ;; # scroll up, increase
+  5) amixer sget Capture | grep -q "\[off\]" && amixer -q sset Capture toggle; amixer -q sset Capture 5%- ;; # scroll down, decrease
 esac
 
 statusLine=$(amixer get Capture | tail -n 1)

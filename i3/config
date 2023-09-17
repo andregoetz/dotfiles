@@ -312,7 +312,7 @@ bindsym Control+Mod1+c exec /usr/bin/code
 bindsym Print exec --no-startup-id flatpak run org.flameshot.Flameshot gui
 
 # Power Profiles menu switcher (rofi)
-bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
+#bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
 
 ##########################################
 # configuration for workspace behaviour: #
