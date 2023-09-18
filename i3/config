@@ -430,16 +430,16 @@ exec --no-startup-id sleep 1 && feh --bg-fill ~/.i3/bg.png
 #exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
 
 # set powersavings for display:
-exec --no-startup-id xset dpms 0 900 600
-exec --no-startup-id xss-lock -- betterlockscreen -l blur
+exec --no-startup-id xset dpms 0 0 600
+exec --no-startup-id xss-lock -- $Locker
+exec --no-startup-id ~/.config/i3/scripts/suspend_after_lock
 
 # disable power saving (for example if using xscreensaver)
 #exec --no-startup-id xset -dpms
 
 # use xautolock to use autosuspend rules for mobile devices
 # https://wiki.archlinux.org/title/Session_lock#xautolock
-#exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"
-
+#exec --no-startup-id xautolock -time 1 -locker "systemctl suspend" -detectsleep
 
 # xscreensaver
 # https://www.jwz.org/xscreensaver
@@ -476,7 +476,8 @@ exec --no-startup-id flatpak run org.flameshot.Flameshot
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift -t 6500:2500
 exec --no-startup-id firewall-applet
-exec --no-startup-id sleep 3 && i3-msg "workspace $ws1"
+#exec --no-startup-id sleep 3 && i3-msg "workspace $ws1"
+exec --no-startup-id dcnnt start
 
 ###############
 # system tray #
