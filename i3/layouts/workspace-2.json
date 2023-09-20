@@ -5,8 +5,8 @@
     "geometry": {
        "height": 1391,
        "width": 2542,
-       "x": 0,
-       "y": 0
+       "x": 9,
+       "y": 9
     },
     "marks": [],
     "name": "Firefox Developer Edition",
@@ -29,8 +29,8 @@
     "geometry": {
        "height": 1391,
        "width": 2542,
-       "x": 2566,
-       "y": 12
+       "x": 2563,
+       "y": 9
     },
     "marks": [],
     "name": "Chromium",
