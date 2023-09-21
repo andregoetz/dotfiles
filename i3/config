@@ -470,7 +470,7 @@ exec --no-startup-id i3-msg "workspace $ws3; append_layout ~/.i3/workspace-3.jso
 exec --no-startup-id element-desktop
 exec --no-startup-id flatpak run io.github.spacingbat3.webcord
 # background apps
-exec --no-startup-id sleep 3 && i3-msg "workspace $ws1"
+exec --no-startup-id sleep 3 && i3-msg "workspace $ws2"
 exec --no-startup-id flatpak run com.github.vladimiry.ElectronMail
 exec --no-startup-id flatpak run com.nextcloud.desktopclient.nextcloud
 exec --no-startup-id flatpak run org.flameshot.Flameshot
