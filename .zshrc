@@ -42,6 +42,7 @@ export EDITOR='nvim'
 export PAGER='nvimpager'
 
 # Aliases
+alias c='clear'
 alias pacshut='yay -Syu --noconfirm && sudo shutdown now'
 alias pacreboot='yay -Syu --noconfirm && sudo reboot'
 alias disex='disown && exit'
