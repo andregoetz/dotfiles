@@ -10,6 +10,7 @@ text/mml=firefoxdeveloperedition.desktop;
 text/xml=firefoxdeveloperedition.desktop;
 x-scheme-handler/http=firefoxdeveloperedition.desktop;
 x-scheme-handler/https=firefoxdeveloperedition.desktop;
+x-scheme-handler/discord-418076578333851669=discord-418076578333851669.desktop
 
 [Added Associations]
 application/json=nvim.desktop;
