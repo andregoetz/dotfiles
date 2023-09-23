@@ -13,3 +13,4 @@ ln -sf ~/data/VirtualBox\ VMs ~
 ln -sf ~/data/Coatsink ~
 ln -sf ~/data/.technic ~
 ln -sf ~/data/.minecraft ~
+ln -sf ~/data/.badlion ~/.config/Badlion\ Client

@@ -8,7 +8,7 @@ if [[ $1 == "-p" ]]; then
     geoclue redshift copyq xss-lock firefox-developer-edition ripgrep-all \
     mimeo flatpak htop element-desktop docker docker-compose just epson-inkjet-printer-escpr \
     github-cli nodejs npm nvimpager xkblayout-state-git perl-anyevent-i3 perl-json-xs gnome-calendar \
-    xdotool xsane python-pip python-pipx fbreader ansible steam
+    xdotool xsane python-pip python-pipx fbreader ansible steam badlion-client
     flatpak install flathub io.github.spacingbat3.webcord com.github.tchx84.Flatseal io.gitlab.librewolf-community com.github.Eloston.UngoogledChromium \
     org.libreoffice.LibreOffice org.flameshot.Flameshot org.gimp.GIMP com.github.vladimiry.ElectronMail org.mozilla.Thunderbird com.github.jeromerobert.pdfarranger \
     org.qbittorrent.qBittorrent org.gnome.SimpleScan com.belmoussaoui.Authenticator org.videolan.VLC com.nextcloud.desktopclient.nextcloud org.gnome.Evince \
