@@ -326,7 +326,7 @@ set $ws3 "3:"
 set $ws4 "4:"
 set $ws5 "5:"
 set $ws6 "6:"
-set $ws7 "7"
+set $ws7 "7:"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
@@ -351,6 +351,7 @@ assign [class="electron-mail"] $ws5
 assign [class="Element"] $ws3
 assign [class="WebCord"] $ws3
 assign [class="Code"] $ws4
+assign [class="steam"] $ws7
 
 # automatic set focus new window if it opens on another workspace than the current:
 #for_window [class="Xfce4-terminal"] focus
@@ -363,6 +364,7 @@ for_window [class="electron-mail"] focus
 #for_window [class="Element"] focus
 #for_window [class="WebCord"] focus
 for_window [class="Code"] focus
+for_window [class="steam"] focus
 
 ##############
 # compositor #
@@ -528,6 +530,7 @@ for_window [class="com.github.tchx84.Flatseal"] border pixel 3
 for_window [class="Simple-scan"] border pixel 3
 for_window [class="Evince"] border pixel 3
 for_window [class="Code"] border pixel 3
+for_window [class="steam"] border pixel 3
 
 # set size of floating window
 #for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog
