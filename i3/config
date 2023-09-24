@@ -353,6 +353,7 @@ assign [class="WebCord"] $ws3
 assign [class="Code"] $ws4
 assign [class="steam"] $ws7
 assign [class="Badlion.*"] $ws7
+assign [class="(?i)heroic"] $ws7
 
 # automatic set focus new window if it opens on another workspace than the current:
 #for_window [class="Xfce4-terminal"] focus
@@ -366,6 +367,8 @@ for_window [class="electron-mail"] focus
 #for_window [class="WebCord"] focus
 for_window [class="Code"] focus
 for_window [class="steam"] focus
+for_window [class="Badlion.*"] focus
+for_window [class="(?i)heroic"] focus
 
 ##############
 # compositor #
@@ -535,6 +538,7 @@ for_window [class="Evince"] border pixel 3
 for_window [class="Code"] border pixel 3
 for_window [class="steam"] border pixel 3
 for_window [class="Badlion.*"] border pixel 3
+for_window [class="(?i)heroic"] border pixel 3
 
 # set size of floating window
 #for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog
