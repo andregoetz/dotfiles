@@ -1,0 +1,12 @@
+#!/bin/bash
+
+output=$(xrandr | head -n 2 | tail -n 1)
+output=($output)
+output=${output[0]}
+
+max_res=$(xrandr | head -n 3 | tail -n 1)
+max_res=($max_res)
+max_res=${max_res[0]}
+
+echo $output $max_res
+xrandr --output $output --mode $max_res

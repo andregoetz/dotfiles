@@ -11,6 +11,7 @@ ln -sf "$p"/scripts/microphone ~/.config/i3/scripts/microphone
 ln -sf "$p"/scripts/cpu_usage ~/.config/i3/scripts/cpu_usage
 ln -sf "$p"/scripts/time ~/.config/i3/scripts/time
 ln -sf "$p"/scripts/suspend_after_lock ~/.config/i3/scripts/suspend_after_lock
+ln -sf "$p"/scripts/apply-resolution ~/.local/bin/apply-resolution
 ln -sf "$p"/.Xresources ~/.Xresources
 ln -sf "$p"/mimeapps.list ~/.config/mimeapps.list
 
