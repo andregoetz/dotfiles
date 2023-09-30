@@ -70,4 +70,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 
 let g:camelcasemotion_key = '<leader>'
+let g:VM_maps = {}
+let g:VM_maps['Find Under']         = 'gb'           " replace C-n
+let g:VM_maps['Find Subword Under'] = 'gb'           " replace visual C-n
 
