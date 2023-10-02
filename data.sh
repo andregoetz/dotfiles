@@ -14,3 +14,4 @@ ln -sf ~/data/Coatsink ~
 ln -sf ~/data/.technic ~
 ln -sf ~/data/.minecraft ~
 ln -sf ~/data/.badlion ~/.config/Badlion\ Client
+ln -sf ~/Documents/master ~
