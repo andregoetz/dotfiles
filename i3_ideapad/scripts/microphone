@@ -1,0 +1,22 @@
+#!/bin/bash
+
+case $BLOCK_BUTTON in
+  1) pavucontrol ;;											     # left click, pavucontrol
+  2) amixer -q sset Capture toggle ;;									     # middle click, mute/unmute
+  4) amixer sget Capture | grep -q "\[off\]" && amixer -q sset Capture toggle; amixer -q sset Capture 5%+ ;; # scroll up, increase
+  5) amixer sget Capture | grep -q "\[off\]" && amixer -q sset Capture toggle; amixer -q sset Capture 5%- ;; # scroll down, decrease
+esac
+
+statusLine=$(amixer get Capture | tail -n 1)
+status=$(echo "${statusLine}" | grep -wo "on")
+volume=$(echo "${statusLine}" | awk -F ' ' '{print $5}' | tr -d '[]%')
+
+if [[ "${status}" == "on" ]]; then
+  echo "  ${volume}%"
+  echo "  ${volume}%"
+  echo "#FFFFFF"
+else
+  echo " Mute"
+  echo " Mute"
+  echo "#FF0000"
+fi

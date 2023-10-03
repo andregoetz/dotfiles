@@ -1,0 +1,48 @@
+{
+    "border": "pixel",
+    "current_border_width": 3,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1031,
+       "width": 948,
+       "x": 9,
+       "y": 9
+    },
+    "marks": [],
+    "name": "Firefox Developer Edition",
+    "percent": 0.5,
+    "swallows": [
+       {
+           "class": "^firefoxdeveloperedition$",
+           "instance": "^Navigator$",
+           "machine": "^andiru\\-ideapad\\-endeavour$",
+           "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 3,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1031,
+       "width": 948,
+       "x": 957,
+       "y": 9
+    },
+    "marks": [],
+    "name": "Chromium",
+    "percent": 0.5,
+    "swallows": [
+       {
+           "class": "^Chromium\\-browser$",
+           "instance": "^chromium\\-browser$",
+           "machine": "^andiru\\-ideapad\\-endeavour$",
+           "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
