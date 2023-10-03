@@ -10,7 +10,7 @@ if [[ $1 == "-p" ]]; then
     github-cli nodejs npm nvimpager xkblayout-state-git perl-anyevent-i3 perl-json-xs gnome-calendar \
     xdotool xsane python-pip python-pipx fbreader ansible steam badlion-client wine heroic-games-launcher-bin \
     texlive biber texlive-langgerman openjdk-src openjdk-doc jdk-openjdk jre-openjdk maven go visual-studio-code-bin \
-    yt-dlp
+    yt-dlp qt5ct adwaita-qt5-git
     flatpak install flathub io.github.spacingbat3.webcord com.github.tchx84.Flatseal io.gitlab.librewolf-community com.github.Eloston.UngoogledChromium \
     org.libreoffice.LibreOffice org.flameshot.Flameshot org.gimp.GIMP com.github.vladimiry.ElectronMail org.mozilla.Thunderbird com.github.jeromerobert.pdfarranger \
     org.qbittorrent.qBittorrent org.gnome.SimpleScan com.belmoussaoui.Authenticator org.videolan.VLC com.nextcloud.desktopclient.nextcloud org.gnome.Evince \
