@@ -11,6 +11,9 @@ text/xml=firefoxdeveloperedition.desktop;
 x-scheme-handler/http=firefoxdeveloperedition.desktop;
 x-scheme-handler/https=firefoxdeveloperedition.desktop;
 x-scheme-handler/discord-418076578333851669=discord-418076578333851669.desktop
+image/png=org.gnome.gThumb.desktop
+image/jpg=org.gnome.gThumb.desktop
+image/jpeg=org.gnome.gThumb.desktop
 
 [Added Associations]
 application/json=nvim.desktop;
