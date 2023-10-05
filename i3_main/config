@@ -476,6 +476,7 @@ for_window [class="Badlion.*"] border pixel 3
 for_window [class="(?i)heroic"] border pixel 3
 for_window [class="File-roller"] border pixel 3
 for_window [class="Gthumb"] border pixel 3
+for_window [class="Pdfarranger"] border pixel 3
 
 # set size of floating window
 #for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog
