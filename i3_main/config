@@ -311,6 +311,7 @@ assign [class="thunderbird"] $ws5
 assign [class="electron-mail"] $ws5
 assign [class="Element"] $ws3
 assign [class="WebCord"] $ws3
+assign [class="dino"] $ws3
 assign [class="Code"] $ws4
 assign [class="steam"] $ws7
 assign [class="Badlion.*"] $ws7
@@ -479,6 +480,7 @@ for_window [class="File-roller"] border pixel 3
 for_window [class="Gthumb"] border pixel 3
 for_window [class="Pdfarranger"] border pixel 3
 for_window [class="monero-core"] border pixel 3
+for_window [class="dino"] border pixel 3
 
 # set size of floating window
 #for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog
