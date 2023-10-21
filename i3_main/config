@@ -271,8 +271,9 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+g exec /usr/bin/firefox-developer-edition
 bindsym $mod+n exec /usr/bin/thunar
 bindsym Control+Mod1+c exec /usr/bin/code
-bindsym Print exec --no-startup-id flatpak run org.flameshot.Flameshot gui
-bindsym Control+Print exec --no-startup-id flatpak run org.flameshot.Flameshot full --clipboard
+bindsym Print exec --no-startup-id flameshot gui
+bindsym Shift+Print exec --no-startup-id flameshot gui --delay 5000
+bindsym Control+Print exec --no-startup-id flameshot full --clipboard
 
 ##########################################
 # configuration for workspace behaviour: #
@@ -410,7 +411,7 @@ exec --no-startup-id ~/.config/i3/scripts/suspend_after_lock
 # dunst config used ~/.config/dunst/dunstrc
 # set alternative config if needed:
 #exec --no-startup-id dunst --config ~/.config/dunst/dunstrc
-# may yneed to run dbus-launch explicitly: 
+# may yneed to run dbus-launch explicitly:
 #exec --no-startup-id dbus-launch dunst
 exec --no-startup-id dunst
 
@@ -427,7 +428,7 @@ exec --no-startup-id flatpak run io.github.spacingbat3.webcord
 exec --no-startup-id sleep 3 && i3-msg "workspace $ws2"
 exec --no-startup-id flatpak run com.github.vladimiry.ElectronMail
 exec --no-startup-id flatpak run com.nextcloud.desktopclient.nextcloud
-exec --no-startup-id flatpak run org.flameshot.Flameshot
+exec --no-startup-id flameshot
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift -t 6500:2500
 exec --no-startup-id firewall-applet
@@ -477,6 +478,7 @@ for_window [class="(?i)heroic"] border pixel 3
 for_window [class="File-roller"] border pixel 3
 for_window [class="Gthumb"] border pixel 3
 for_window [class="Pdfarranger"] border pixel 3
+for_window [class="monero-core"] border pixel 3
 
 # set size of floating window
 #for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog
