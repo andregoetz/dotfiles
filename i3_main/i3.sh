@@ -13,6 +13,7 @@ ln -sf "$p"/scripts/time ~/.config/i3/scripts/time
 ln -sf "$p"/scripts/suspend_after_lock ~/.config/i3/scripts/suspend_after_lock
 ln -sf "$p"/scripts/apply-resolution ~/.local/bin/apply-resolution
 ln -sf "$p"/scripts/toggle_dpms ~/.local/bin/toggle_dpms
+ln -sf "$p"/scripts/dpms ~/.config/i3/scripts/dpms
 ln -sf "$p"/.Xresources ~/.Xresources
 ln -sf "$p"/mimeapps.list ~/.config/mimeapps.list
 

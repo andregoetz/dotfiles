@@ -1,0 +1,16 @@
+#!/bin/bash
+
+case $BLOCK_BUTTON in
+  1) toggle_dpms ;; # left click, toggle dpms
+  2) toggle_dpms ;; # middle click, toggle dpms
+esac
+
+if [[ $(xset -q | grep 'DPMS is Disabled') ]]; then
+  echo ""
+  echo ""
+  echo "#538ed1"
+else
+  echo ""
+  echo ""
+  echo "#af582f"
+fi
