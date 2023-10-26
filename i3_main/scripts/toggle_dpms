@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [[ $(xset -q | grep 'DPMS is Disabled') ]]; then
+    xset dpms
+else
+    xset -dpms
+fi

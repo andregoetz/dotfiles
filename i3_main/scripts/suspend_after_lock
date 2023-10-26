@@ -1,21 +1,25 @@
 #!/bin/bash
 
-while true; do
-    # Check if the screen is locked
-    if [[ $(xset -q | grep 'Monitor is On') ]]; then
-        # Screen is unlocked, reset timer
-        sleep 10  # Check every 10 seconds
+function can_lock() {
+    # Check if the screen is locked or DPMS is Disabled
+    if [[ $(xset -q | grep 'Monitor is On') ]] || [[ $(xset -q | grep 'DPMS is Disabled') ]]; then
+	return 1 # can't lock
     else
-        # Screen is locked, start the countdown
+	return 0 # can lock
+    fi
+}
+
+while true; do
+    if ! can_lock; then
+        sleep 10
+    else
         for ((i = 1; i <= 300; i++)); do
-            # Check if the screen is still locked
-            if [[ $(xset -q | grep 'Monitor is On') ]]; then
+            if ! can_lock; then
                 break
             fi
-            sleep 1  # Wait for 1 second
+            sleep 1
         done
-        # If the screen is still locked after 5 minutes, suspend
-        if ! [[ $(xset -q | grep 'Monitor is On') ]]; then
+        if can_lock; then
             systemctl suspend
         fi
     fi

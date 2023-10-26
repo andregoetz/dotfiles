@@ -180,8 +180,11 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to update i3)
 bindsym $mod+Shift+r restart
 
-# apply the maximum possible display resulution
+# apply the maximum possible display resolution
 bindsym $mod+Shift+m exec ~/.local/bin/apply-resolution
+
+# toggle the dpms settings
+bindsym $mod+Shift+d exec ~/.local/bin/toggle_dpms
 
 # keybinding in fancy rofi (automated):
 bindsym F1 exec ~/.config/i3/scripts/keyhint-2
@@ -288,7 +291,7 @@ set $ws4 "4:"
 set $ws5 "5:"
 set $ws6 "6:"
 set $ws7 "7:"
-set $ws8 "8"
+set $ws8 "8:"
 set $ws9 "9"
 set $ws10 "10"
 
@@ -316,6 +319,7 @@ assign [class="Code"] $ws4
 assign [class="steam"] $ws7
 assign [class="Badlion.*"] $ws7
 assign [class="(?i)heroic"] $ws7
+assign [class="monero-core"] $ws8
 
 # automatic set focus new window if it opens on another workspace than the current:
 #for_window [class="Xfce4-terminal"] focus
