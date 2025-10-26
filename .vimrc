@@ -16,8 +16,8 @@ set backspace=indent,eol,start  " Backspace in insert mode works like normal edi
 set fileformat=unix  " \n at for EOL
 set splitbelow  " Horizontal splitting a window will put the new window below the current one
 set splitright  " Vertical splitting a window will put the new window right of the current one
-set clipboard+=unnamedplus
 let mapleader = ","
+set clipboard+=unnamedplus
 
 " -- Searching --
 set ignorecase  " Ignore case in search patterns

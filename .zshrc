@@ -39,14 +39,13 @@ export GPG_TTY=$(tty)
 
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
-export PAGER='nvimpager'
+# export PAGER='nvimpager'
 
 # Aliases
 alias c='clear'
 alias pacshut='yay -Syu --noconfirm && sudo shutdown now'
 alias pacreboot='yay -Syu --noconfirm && sudo reboot'
 alias disex='disown && exit'
-alias fhvpn='sudo openconnect -u ag3433s https://vpn.fh-aachen.de/gast'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 session_type() {

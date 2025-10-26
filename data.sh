@@ -11,7 +11,10 @@ ln -sf ~/data/Sync ~
 ln -sf ~/data/Android ~
 ln -sf ~/data/VirtualBox\ VMs ~
 ln -sf ~/data/Coatsink ~
+ln -sf ~/data/.ssh ~
+ln -sf ~/data/.gnupg ~
 ln -sf ~/data/.technic ~
 ln -sf ~/data/.minecraft ~
+ln -sf ~/data/.curseforge ~
 ln -sf ~/data/.badlion ~/.config/Badlion\ Client
 ln -sf ~/Documents/master ~
